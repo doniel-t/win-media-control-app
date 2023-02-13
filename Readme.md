@@ -27,15 +27,23 @@
 
 2. Start the server on your pc\
    Go to the ``win-media-control-app`` directory and start `startup_script.bat`\
-   If you want add this script to your autostart
+   Its recommended to add add a script that runs this script to your autostart
     ```
     .\startup_script.bat
     ```
 
-1. Grab your hostname from the pc you want to control from your phone
+3. Grab your hostname from the pc you want to control from your phone
     ```
     hostname
     ```
 
-1. Get the APK from the Releases and install it on your phone (WIP)
-2. Enter your hostname in the app and try it out
+4. Get the APK from the Releases and install it on your phone (WIP)
+5. Enter your hostname in the app and try it out
+
+
+## TODO ✅
+
+- [ ] React Native App 
+- [ ] Musik Notification Bar on phone
+- [ ] Get song title from winapi and send it to phone
+- [ ] Linux port?
