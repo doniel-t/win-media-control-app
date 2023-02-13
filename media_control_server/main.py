@@ -16,4 +16,8 @@ if __name__ == 'main':
                 "status" : 200
             }
         except:
-            return {"status": 400}
+            available_endpoints = list(MEDIA_KEYS_HEX.keys())
+            return {
+                "status": 400,
+                "message": f"A normal request looks like this: hostname:port/media_controls/endpoint \nYou can try the following endpoints: {available_endpoints}"
+                }
