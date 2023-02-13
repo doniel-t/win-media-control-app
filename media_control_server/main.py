@@ -6,38 +6,14 @@ if __name__ == 'main':
     print('starting server')
     app = FastAPI()
 
-    @app.get("/play")
-    def greet_user():
+    @app.get("/media_controls/{control_key}")
+    def play(control_key):
         try:
-            press_media_control_key(MEDIA_KEYS_HEX['play/pause'])
+            print(control_key)
+            press_media_control_key(MEDIA_KEYS_HEX[control_key])
             return {
-                "message": f"pressed pause/resume",
+                "message": f"pressed {control_key}",
                 "status" : 200
             }
         except:
             return {"status": 400}
-
-
-    @app.get("/prev")
-    def greet_user():
-        try:
-            press_media_control_key(MEDIA_KEYS_HEX['prev'])
-            return {
-                "message": f"playing previous song",
-                "status" : 200
-            }
-        except:
-            return {"status": 400}
-
-
-    @app.get("/next")
-    def greet_user():
-        try:
-            press_media_control_key(MEDIA_KEYS_HEX['next'])
-            return {
-                "message": f"playing next song",
-                "status" : 200
-                }
-        except:
-            return {"status": 400}
-
