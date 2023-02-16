@@ -1,1 +1,5 @@
 media_control_server/__pycache__
+frontend/media-control-app/node_modules
+frontend/media-control-app/ios
+frontend/media-control-app/android
+frontend/media-control-app/.husky
