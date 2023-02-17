@@ -10,7 +10,8 @@ The API is listening to ``localhost:4339/media_controls/{key}`` and the key maps
 
 Example: 
 ```py
-# gets invoked when localhost:4339/media_controls/next is called and triggers the windows action to skip to the next song (if playlist has a next song)
+# gets invoked when localhost:4339/media_controls/next is called 
+# and triggers the windows action to skip to the next song
 MEDIA_ACTIONS['next']() 
 ```
 Currently it supports only ``play_pause``, ``next``, ``prev``, ``mute``, ``volume_up``, ``volume_down`` however you can add any virtual key from the [Microsoft docs](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
