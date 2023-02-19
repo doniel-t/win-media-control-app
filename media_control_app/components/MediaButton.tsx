@@ -26,6 +26,7 @@ const imageSources = {
 export const MediaButton: React.FC<MediaButtonProps> = ({apiParams: { hostname, endpoint }, title, className, imageSrc, isLongText}) => {
     const StyledButton = styled(TouchableOpacity);
     const StyledText = styled(Text);
+    const textStyle = isLongText ? "" : "ml-2"
 
     return <>
         <StyledButton onPress={() => onClickAPIRequest(hostname, endpoint)} className={`${className} flex justify-center m-4 p-8 font-extrabold`}>
@@ -33,7 +34,7 @@ export const MediaButton: React.FC<MediaButtonProps> = ({apiParams: { hostname, 
             <Image source={imageSources[imageSrc]} 
                 style={{width: 40, height: 40}}
             />
-            <StyledText className={`text-white font-medium${isLongText ? "" : " ml-2"}`}>{title}</StyledText>
+            <StyledText className={textStyle} style={{color: 'white', fontWeight: "500"}}>{title}</StyledText>
         </StyledButton>
     </>
 }
