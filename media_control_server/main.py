@@ -5,11 +5,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/media_controls/{key}")
-def use_media_key(action_key):
+def use_media_key(key):
     try:
-        MEDIA_ACTIONS[action_key]()
+        MEDIA_ACTIONS[key]()
         return {
-            "message": f"pressed {action_key}",
+            "message": f"pressed {key}",
             "status" : 200
         }
     except:

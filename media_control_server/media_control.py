@@ -24,6 +24,7 @@ MEDIA_ACTIONS = {
     'volume_up' : __change_volume(win32con.VK_VOLUME_UP),
     'volume_down': __change_volume(win32con.VK_VOLUME_DOWN)
 }
+
 """
 This dict maps a key to the following media key press on windows
 Example usage:
@@ -32,5 +33,3 @@ Example usage:
 MEDIA_ACTIONS['next']()
 ```
 """
-
-
