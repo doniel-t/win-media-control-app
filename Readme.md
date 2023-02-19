@@ -1,6 +1,9 @@
 # Windows Media Control App ⏯️ 
 <p>
-    Full stack app that enables you to press media control keys on you windows machine such as pause/play, previous/next song from your phone
+    Full stack App that enables you to press media control keys on you windows machine such as play/pause, previous/next song and volume controls from your phone.
+</p>
+<p>
+    Perfect when using Youtube Music since it doesnt support Media Controls from the phone unlike Spotify or Youtube Music 
 </p>
 
 <h3>
@@ -42,9 +45,10 @@
     hostname
     ```
 
-4. Get the APK from [here](https://expo.dev/artifacts/eas/nNBX1nHuMPSaFDUYy3VcWX.apk) or build it yourself using an expo account
+4. Get the APK from [here](https://expo.dev/artifacts/eas/uS5n4dR4ubLMM81RYUE1uM.apk) or build it yourself using an expo account
 5. Install the apk on your device and run it
-6. Enter your ``hostname`` in the app and try it out! 🚀
+6. Enter your ``hostname`` in the app and try it out! 🚀\
+The hostname will be cached so you only need to add it once!
 <center><img src="./assets/app_screenshot.png" /></center>
 <center>Screenshot of the app</center>
 
@@ -53,7 +57,8 @@
 - [x] React Native App
 - [x] Use Scrollview instead of static View
 - [x] Cache hostname
-- [ ] Musik Notification Bar on phone
+- [ ] ios port
+- [ ] Music Notification Bar on phone
 - [ ] Get song title from winapi and send it to phone
 - [ ] Linux port?
   
