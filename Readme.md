@@ -48,12 +48,11 @@
 <center><img src="./assets/app_screenshot.png" /></center>
 <center>Screenshot of the app</center>
 
-
-
 ## TODO ✅
 
 - [x] React Native App
-- [ ] Cache hostname
+- [x] Use Scrollview instead of static View
+- [x] Cache hostname
 - [ ] Musik Notification Bar on phone
 - [ ] Get song title from winapi and send it to phone
 - [ ] Linux port?

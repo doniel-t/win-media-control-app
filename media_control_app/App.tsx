@@ -1,13 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Image, Text, ImageBackground, TextInput, ScrollView } from 'react-native';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Toast from 'react-native-toast-message';
 import { MediaButton } from './components/MediaButton';
 import { withExpoSnack } from 'nativewind';
 import { mediaControls } from './utils/mediaControlAttributes';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 function App() {
   const [hostname, setHostname] = useState(''); //insert your hostname as default if you want to rebuild the app
+
+  useEffect(() => {
+    _getHostname();
+  },[])
+
+
+  const _storeHostname = async (passedHostname: string) => {
+    try {
+      await AsyncStorage.setItem('hostname', passedHostname)
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  const _getHostname = async () => {
+    try {
+      const cachedHostname = await AsyncStorage.getItem('hostname');
+      if (cachedHostname !== null) {
+        Toast.show({
+          type: 'info',
+          visibilityTime: 1500,
+          text1: 'Successfully retrieved hostname! ✅🤖',
+        });
+      }
+      setHostname(cachedHostname);
+    } catch (err) {
+      console.error(err);
+      Toast.show({
+        type: 'error',
+        visibilityTime: 1500,
+        text1: 'Failed to retrieve hostname enter below! ❌🤖',
+      });
+    }
+  }
+
 
   return (
     <ScrollView 
@@ -40,7 +77,9 @@ function App() {
             <TextInput
               className='-mt24 w-full justify-center text-white text-center'
               placeholder='Hostname'
+              value={hostname}
               onChangeText={(text) => setHostname(text)}
+              onSubmitEditing={(event) => _storeHostname(event.nativeEvent.text)}
             ></TextInput>
           </View>
         </View>
