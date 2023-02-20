@@ -3,7 +3,7 @@
     Full stack App that enables you to press media control keys on you windows machine such as play/pause, previous/next song and volume controls from your phone.
 </p>
 <p>
-    Perfect when using Youtube Music since it doesnt support Media Controls from the phone unlike Spotify or Youtube Music 
+    Perfect when using Youtube Music since it doesnt support Media Controls from the phone unlike Spotify or Apple Music 
 </p>
 
 <h3>
