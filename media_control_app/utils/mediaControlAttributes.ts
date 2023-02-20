@@ -8,7 +8,7 @@ type MediaControlAttributes = {
 
 export const mediaControls : MediaControlAttributes[] = [
     {
-        title: 'quiter',
+        title: 'quieter',
         endpoint: 'volume_down',
         imageSrc: 'vol_down',
         isLongText: true,
