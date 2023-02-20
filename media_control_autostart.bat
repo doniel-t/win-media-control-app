@@ -3,5 +3,4 @@ SET serverDirectory=Path/to/server/files
 SET scriptName=startup_script.bat
 SET startupScriptPath=%serverDirectory%%scriptName%
 
-CD %serverDirectory%
-CALL %startupScriptPath%
+CALL %startupScriptPath% %serverDirectory%
